@@ -1,6 +1,3 @@
-// import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-// import { redirect } from "next/navigation";
-
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { prisma } from "../utils/db";
@@ -21,24 +18,16 @@ async function getData(userId: string) {
 }
 
 export default async function DashboardRoute() {
-  // tüm bunların yerine middleware oluşturduk ve public olarak sadece ana sayfamızı belirledik  (    publicPaths: ["/"]), alttakine gerek kalmadı
-  // const { getUser } = getKindeServerSession();
-  // const user = await getUser();
-
-  // if (!user) {
-  //   return redirect("/api/auth/register"); // burda eğer giriş yapılmadıysa bu sayfayı göstermeyip registera yönlendirdik
-  // }
-
   const { getUser } = getKindeServerSession();
   const user = await getUser();
   const data = await getData(user?.id);
 
   return (
-    <div>
+    <div className="min-h-screen pt-6 px-6 ">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xl font-medium">Your Blog Articles</h2>
+        <h2 className="text-xl font-medium">Blog Makaleleriniz</h2>
         <Link className={buttonVariants()} href="/dashboard/create">
-          Create Post
+          Blog Oluştur
         </Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
         protocol: "https",
         port: "",
       },
+      {
+        hostname: "ceyhunozdemir.com",
+        protocol: "https",
+        port: "",
+      },
     ],
   },
 };

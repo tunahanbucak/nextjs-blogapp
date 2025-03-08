@@ -19,6 +19,9 @@ async function getData() {
       authorId: true,
       updatedAt: true,
     },
+    orderBy: {
+      createdAt: "desc",
+    },
   });
 
   return data;
@@ -26,9 +29,8 @@ async function getData() {
 
 export default function Home() {
   return (
-    <div className="py-6">
-      <h1 className="text-3xl font-bold tracking-tight mb-8">Latest posts</h1>
-
+    <div className="py-6 min-h-screen px-6 ">
+      <h1 className="text-3xl font-bold tracking-tight mb-8">Son Bloglar</h1>
       <Suspense fallback={<BlogPostsGrid />}>
         <BlogPosts />
       </Suspense>

@@ -30,7 +30,7 @@ export default async function IdPage({ params }: { params: Params }) {
   return (
     <div className="max-w-3xl mx-auto py-8 px-4">
       <Link className={buttonVariants({ variant: "secondary" })} href="/">
-        Back to posts
+        Gönderilere geri dön
       </Link>
       <div className="mb-8 mt-6">
         <h1 className="text-3xl font-bold tracking-tight mb-4">{data.title}</h1>
