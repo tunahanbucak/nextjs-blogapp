@@ -23,6 +23,16 @@ const nextConfig: NextConfig = {
         protocol: "https",
         port: "",
       },
+      {
+        hostname: "blog.ozkula.com.tr",
+        protocol: "https",
+        port: "",
+      },
+      {
+        hostname: "nextjs-blogapp-opal.vercel.app",
+        protocol: "https",
+        port: "",
+      },
     ],
   },
 };

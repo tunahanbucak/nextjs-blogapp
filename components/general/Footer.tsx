@@ -12,9 +12,9 @@ export function Footer() {
           <h1 className="text-2xl font-semibold text-gray-800">
             Yaz <span className="text-blue-600">Lab</span>
           </h1>
-          <p className="text-gray-700 text-sm mt-2">
+          <span className="text-gray-700 text-sm mt-2">
             En güncel içerikleri keşfedin yazılarımıza göz atın!
-          </p>
+          </span>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 text-gray-800 font-medium sm:justify-center mt-6 sm:mt-0 w-full">
           <div className="flex justify-center gap-4 w-full">
